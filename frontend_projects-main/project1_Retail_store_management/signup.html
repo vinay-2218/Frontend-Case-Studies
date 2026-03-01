@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body{
+            margin-top: 100px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        #login{
+            width: 450px;
+            justify-content: center;
+            box-shadow: 5px 5px 10px 10px #6a228000;
+        }
+        #loginbox{
+            background: #fff;
+    padding: 30px;
+    width: 420px;
+    height: 400px;
+    border-radius: 12px;
+    display: inline-block;
+
+
+    text-align: center;
+        }
+        .head{
+        text-align: center;
+        margin-bottom: 2px;
+        
+        }
+        .input{
+            height: 40px;
+            width: 350px;
+            margin: 10px;
+            text-align: center;
+            background-color: rgba(161, 161, 163, 0.067);
+            border-radius: 35px;
+
+        }
+        #signup{
+            align-items: center;
+            height: 40px;
+            width: 190px;
+        }
+        .checking{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main id="login">
+        <section id="loginbox">
+            <h1 class="head"> Create Account</h1>
+            <form action="" class="loginbox">
+                <div><label for="name"></label>
+                <input name="username" id="name" class="input" type="text" placeholder="Enter Your Username" required >
+            </div>
+            <div><label for="email"></label>
+            <input  name="emailid" id="email" class="input" type="email" placeholder="Enter Your email" required></div>
+            <div><label for="password" ></label><input name="pass" id="password" type="password" class="input"   placeholder="enter password" required></div>
+            <div><label for="confirm"></label> <input class="input" id="confirm" type="password" placeholder="Confirm password" required></div>
+            <div>
+                <button onclick="Check()" type="submit" id="signup" class="input">Signup</button><br>
+                <a href="loginpage.html" id="loginlink">Already have a account</a>
+            </div>
+            </form>
+        
+        
+
+        </section>
+    </main>
+    <script>
+        function Check(){
+            if(Validate()){
+                window.location.href="main.html";
+
+            }
+
+        }
+        function Validate(){
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let password=document.getElementById("password").value;
+        let cpassword=document.getElementById("confirm").value;
+        if (!email.includes("@")|| !email.includes(".")){
+            alert("wrong email");
+            return false;
+        }
+        if (password.length  <8){
+            alert("Password must be at least 8 characters long");
+            return false;
+        }
+        if(!/[A-Z]/.test(password)){
+            alert("Password must include an uppercase letter");
+            return false;
+        }
+        if(!/[0-9]/.test(password)){
+             alert("Password must include a number");
+             return false;
+        }
+        if (!/[!@#$%^&*]/.test(password)) {
+             alert("Password must include a special character");
+                 return false;
+        }
+        if (password !== cpassword) {
+             alert("Passwords do not match");
+            return false;
+        }
+            return true;
+
+    }
+
+</script>
+    
+</body>
+</html>

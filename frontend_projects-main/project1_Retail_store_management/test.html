@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <header>    </header>
+    <main class="layout">
+        <section class="container">
+            <div>
+                <h1 id="heading">Login In</h1>
+                <p>Stay updated on your daily needs</p>
+
+            </div>
+            <div class="inputbox">
+                <form id="form">
+                    <label for="name">Username</label>
+                    <input class="input" name="name" id="Username" type="text" placeholder="Username">
+                    <label for="password">Password</label>
+                    <input class="input" name="password" id="password" type="password" placeholder="Password">
+                     <a  href="#" id="forgot">Forgot Password</a>
+                </form>
+                <button type="submit"  id="signupbtn" onclick="loginuser()">Signup</button>
+            </div>
+            <p>doesn't have a account?<a id="signuplink" href="signup.html">signin</a></p>
+
+        </section>
+
+    </main>
+    <script>
+        function loginuser(){
+            const id=document.getElementById("Username").value;
+            const p=document.getElementById("password").value;
+    
+            if(id==="basha" && p==="123"){
+                window.location.href="index.html";
+                document.getElementById("form").reset();
+
+            }
+            else{
+                alert("invalid username or passsword");
+            }
+        }
+    </script>
+</body>
+</html>

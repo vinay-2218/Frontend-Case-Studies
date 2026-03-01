@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #0afdf5;
+    }
+     .container{
+        width: 95%;
+        margin: auto;
+        position:relative;
+        display: flex;
+        align-items: center;
+     }
+     #head{
+          background: #bed9b886;
+            color: #fff;
+        padding: 10px 0;
+        width: 100%;
+        height: 130px;
+        overflow: hidden;
+        background-size: auto;
+        background-repeat:no-repeat;
+        position: relative;
+        top: 0;
+        z-index: 900;
+      
+     }
+     .logo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0;
+     }
+     .title{
+    position: absolute;
+    left: 50%;
+    padding-left: 70px;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+     #navbar ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+         justify-content: center;
+            margin: 0;
+  
+
+
+     }
+     #navbar ul li{
+        margin-right: 30px;
+     }
+     #navbar ul li a{
+        text-decoration: none;
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.3s;
+
+     }
+     #navbar ul li a:hover {
+        background-color: #e0e0e0;
+  color: #000;
+}
+
+    section{
+        display: none;
+        top: 140px;
+    }
+    </style>
+</head>
+<body>
+    <header id="head">
+        <div class="container">
+            <a href="Mainpage.html"><img src="logo.jpeg" alt="logo" class="logo"></a>
+            <h1 class="title">Welcome to Our Reatail Store Managemnet webiste</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home" onclick="loadhome()">Home</a></li>
+                <li><a href="#products" onclick="loadproducts()">Products</a></li>
+                <li><a href="#Cart">Cart</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="aboutus.html">Contact</a></li>
+                <li id="loginbtn"><a href="#loginsection" onclick="loginpage()">Loign</a></li>
+                <li id="signupbtn"><a href="#signupsection"  onclick="signuppage()">Signup</a></li>
+                <li><a id="logoutbtn" href="#loginsection" style="display: none;" > Logout</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="mainbody">
+        <section id="loginsection">
+            <form action="">
+            <h2>Login</h2>
+            <input type="text" id="name1" placeholder="Username" class="input"><br>
+            <input type="password" id="password1" placeholder="Password" class="input"><br>
+            <a href="#" onclick="forgotpassword()" id="forgotpassword">forgotpassword?</a><br>
+            <button type="button" id="loginbutton" onclick="verifylogin()">Signup</button>
+             </form>
+             <a id="signuplink" href="#signupsection" onclick="signuppage()">already hae a account?</a>
+        </section>
+        <section id="signupsection">
+            <h1 class="head"> Create Account</h1>
+            <form action="" class="loginbox">
+                <div><label for="name"></label>
+                <input name="username" id="name" class="input" type="text" placeholder="Enter Your Username" required >
+            </div>
+            <div><label for="email"></label>
+            <input  name="emailid" id="email" class="input" type="email" placeholder="Enter Your email" required></div>
+            <div><label for="password" ></label><input name="pass" id="password" type="password" class="input"   placeholder="enter password" required></div>
+            <div><label for="confirm"></label> <input class="input" id="confirm" type="password" placeholder="Confirm password" required></div>
+            <div>
+                <button onclick="verifysignup()" type="button" id="signup" class="input">Signup</button><br>
+                <a href="loginpage.html" id="loginlink" onclick="loginpage()">Already have a account</a>
+            </div>
+            </form>
+        
+        
+
+        <section id="home">
+
+        </section>
+        <section id="products">
+
+        </section>
+
+    
+        <section id="contact">
+
+        </section>
+
+    </main>
+    <script src="script.js">
+    
+    </script>
+</body>
+</html>

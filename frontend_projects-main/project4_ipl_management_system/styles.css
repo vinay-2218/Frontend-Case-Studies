@@ -1,0 +1,198 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        header{
+            width: 90%;
+            margin:20px auto;
+            background-color: #dbe0e4;
+           padding: 10px;
+        }
+        header h3{
+            text-align: center;
+             margin-bottom: 5px;
+
+
+        }
+        header nav{
+            text-align: center;
+            background-color: rgb(218, 211, 222);
+            
+        }
+        header nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 5px;
+
+        
+            gap: 20px;
+        }
+        header nav ul li a{
+            display: block;
+            padding: 5px 10px;
+            background-color:lightslategrey;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        header nav ul a:hover{
+            color: #e4476b;
+            transform:0.3s ;
+            background-color: #b294f16d;
+        }
+        .teams-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .teams-container section{
+            background-color: whitesmoke;
+            width: cal(50% - 10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+        }
+         .teams-container section img{
+            height: 120px;
+            width: 100%;
+
+         }
+         .teams-container a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        @media(max-width:600px){
+            .teams-container{
+                width: 100%;
+            }
+        }
+
+        #teams-information{
+            margin-left: 10px;
+            width: 90%;
+            display: flex;
+            text-align: center;
+            text-decoration: none;
+        
+        }
+        .team{
+            flex: 1;
+            border: 2px solid #4da6ff;   
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9fcff;
+            text-align: center;
+
+
+                }
+        #teams-information section {
+            gap: 20px;
+            padding: 20px;
+
+            display: flex;
+    
+        }
+        #teams-information section ul{
+    
+            list-style: none;
+            padding: 10px;
+            width: 50%;
+            background-color:whitesmoke;
+            border-radius: 8px;
+    
+            
+        }
+        #teams-information section ul li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+
+
+
+        footer{
+            background-color: rgb(173, 241, 244);
+            text-align: center;
+            padding: 15px;
+                 font-size: 14px;
+        }
+        #about{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+              background-color: #f4fefe;
+        }
+        #home{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+              background-color: #f4fefe;
+        }
+        #home h3{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+       #matches1 {
+            display: grid;
+            gap: 20px;
+                padding: 20px;
+                background-color: #f5f7fa;
+        }
+            .match {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 18px 20px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-left: 5px solid #1e88e5;
+            }
+            .match:hover {
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+            }
+            .match h4 {
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 700;
+                color: #1e88e5;
+            }
+            .match p {
+                margin: 4px 0;
+                font-size: 14px;
+                color: #444;
+            }
+            @media (max-width: 600px) {
+                .match {
+                    padding: 15px;
+                }
+
+                .match h4 {
+                    font-size: 16px;
+                }
+            }
+            .pointssection {
+                padding: 20px;
+                background-color: #f5f7fa;
+            }
+
+            .pointssection h2 {
+                margin-bottom: 10px;
+                color: #1e88e5;
+            }
+            .points {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #ffffff;
+                border: 2px solid #1e88e5;
+            }
+            .points-table th {
+                background-color: #e3f2fd;
+                font-weight: bold;
+            }
